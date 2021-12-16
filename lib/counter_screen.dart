@@ -16,7 +16,10 @@ class CounterScreen extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextButton(onPressed: () {}, child: Text("MINUS ")),
+            TextButton(onPressed: () {
+              counter--;
+              print(counter);
+            }, child: Text("MINUS ")),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
