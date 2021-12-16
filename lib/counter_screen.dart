@@ -20,7 +20,7 @@ class CounterScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
-                "2",
+                '$counter',
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
               ),
             ),
