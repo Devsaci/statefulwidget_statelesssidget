@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-class CounterScreen extends StatelessWidget {
-  const CounterScreen({Key? key}) : super(key: key);
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-
-      ),
+    return const MaterialApp(
+      home: null,
     );
+
+
   }
 }
