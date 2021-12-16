@@ -11,7 +11,7 @@ class CounterScreen extends StatelessWidget {
       appBar: AppBar(title: Text("Counter "),),
       body: Row(
         children: [
-
+       TextButton(onPressed: (){}, child: Text("MINUS "),)
         ],
       ),
     );
