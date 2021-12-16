@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 
 class CounterScreen extends StatelessWidget {
   int counter = 1;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,10 +17,12 @@ class CounterScreen extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            TextButton(onPressed: () {
-              counter--;
-              print(counter);
-            }, child: Text("MINUS ")),
+            TextButton(
+                onPressed: () {
+                  counter--;
+                  print(counter);
+                },
+                child: Text("MINUS ")),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 40.0),
               child: Text(
@@ -27,7 +30,12 @@ class CounterScreen extends StatelessWidget {
                 style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
               ),
             ),
-            TextButton(onPressed: () {}, child: Text("PLUS ")),
+            TextButton(
+                onPressed: () {
+                  counter++;
+                  print(counter);
+                },
+                child: Text("PLUS ")),
           ],
         ),
       ),
