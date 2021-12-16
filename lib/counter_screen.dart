@@ -13,6 +13,11 @@ class _CounterScreenState extends State<CounterScreen> {
   int counter = 1;
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
