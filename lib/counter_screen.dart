@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'dart:ui';
 
@@ -12,9 +12,16 @@ class CounterScreen extends StatelessWidget {
         title: Text("Counter "),
       ),
       body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           TextButton(onPressed: () {}, child: Text("MINUS ")),
-          Text("2",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 40.0),
+            child: Text(
+              "2",
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+            ),
+          ),
           TextButton(onPressed: () {}, child: Text("PLUS ")),
         ],
       ),
