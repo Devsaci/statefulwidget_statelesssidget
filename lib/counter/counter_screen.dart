@@ -16,37 +16,39 @@ class CounterScreen extends StatelessWidget {
       create: (BuildContext context) => CounterCubit(),
       child: BlocConsumer<CounterCubit, CounterStates>(
         listener: (BuildContext context, state) {},
-        builder: (BuildContext context, Object? state) => Scaffold(
-          appBar: AppBar(
-            title: Text("Counter "),
-          ),
-          body: Center(
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                TextButton(
-                    onPressed: () {
-                      counter--;
-                      print(counter);
-                    },
-                    child: Text("MINUS ")),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 40.0),
-                  child: Text(
-                    '$counter',
-                    style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
-                  ),
-                ),
-                TextButton(
-                    onPressed: () {
-                      counter++;
-                      print(counter);
-                    },
-                    child: Text("PLUS ")),
-              ],
+        builder: (BuildContext context, Object? state){
+          return Scaffold(
+            appBar: AppBar(
+              title: Text("Counter "),
             ),
-          ),
-        ),
+            body: Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  TextButton(
+                      onPressed: () {
+                        counter--;
+                        print(counter);
+                      },
+                      child: Text("MINUS ")),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 40.0),
+                    child: Text(
+                      '$counter',
+                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                    ),
+                  ),
+                  TextButton(
+                      onPressed: () {
+                        counter++;
+                        print(counter);
+                      },
+                      child: Text("PLUS ")),
+                ],
+              ),
+            ),
+          );
+        }
       ),
     );
   }
