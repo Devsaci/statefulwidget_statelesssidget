@@ -27,21 +27,21 @@ class CounterScreen extends StatelessWidget {
                 children: [
                   TextButton(
                       onPressed: () {
-                        counter--;
-                        print(counter);
+                        // counter--;
+                        // print(counter);
                       },
                       child: Text("MINUS ")),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 40.0),
                     child: Text(
-                      '$counter',
+                      '${CounterCubit.get(context).counter}',
                       style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
                     ),
                   ),
                   TextButton(
                       onPressed: () {
-                        counter++;
-                        print(counter);
+                        // counter++;
+                        // print(counter);
                       },
                       child: Text("PLUS ")),
                 ],
