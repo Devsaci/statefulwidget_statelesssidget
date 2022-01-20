@@ -8,15 +8,19 @@ import 'package:statefulwidget_statelesssidget/counter/cubit.dart';
 import 'package:statefulwidget_statelesssidget/counter/states.dart';
 
 class CounterScreen extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (BuildContext context) => CounterCubit(),
       child: BlocConsumer<CounterCubit, CounterStates>(
-        listener: (BuildContext context, state) {},
-        builder: (BuildContext context, Object? state){
+        listener: (BuildContext context, state) {
+          if (state is CounterMinusState) {
+            print('-----------------------');
+          } else if (state is CounterPlusState) {
+            print('++++++++++++++++++++++');
+          }
+        },
+        builder: (BuildContext context, Object? state) {
           return Scaffold(
             appBar: AppBar(
               title: Text("Counter "),
@@ -27,6 +31,7 @@ class CounterScreen extends StatelessWidget {
                 children: [
                   TextButton(
                       onPressed: () {
+                        CounterCubit.get(context).minus();
                         // counter--;
                         // print(counter);
                       },
@@ -35,11 +40,13 @@ class CounterScreen extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(horizontal: 40.0),
                     child: Text(
                       '${CounterCubit.get(context).counter}',
-                      style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
                     ),
                   ),
                   TextButton(
                       onPressed: () {
+                        CounterCubit.get(context).plus();
                         // counter++;
                         // print(counter);
                       },
@@ -48,7 +55,7 @@ class CounterScreen extends StatelessWidget {
               ),
             ),
           );
-        }
+        },
       ),
     );
   }

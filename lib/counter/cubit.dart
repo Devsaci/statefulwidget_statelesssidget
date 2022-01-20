@@ -10,8 +10,10 @@ class CounterCubit extends Cubit<CounterStates> {
 
   void minus(){
     counter--;
+    emit(CounterMinusState());
   }
   void plus(){
     counter++;
+    emit(CounterPlusState());
   }
 }
