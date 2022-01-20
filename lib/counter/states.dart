@@ -7,6 +7,7 @@ class CounterMinusState extends CounterStates {
 
   CounterMinusState(this.counter);
 }
+
 class CounterPlusState extends CounterStates {
   final int counter;
 
