@@ -30,10 +30,9 @@ class _CounterScreenState extends State<CounterScreen> {
             TextButton(
                 onPressed: () {
                   setState(() {
-
+                    counter--;
+                    print(counter);
                   });
-                  counter--;
-                  print(counter);
                 },
                 child: Text("MINUS ")),
             Padding(
@@ -46,10 +45,9 @@ class _CounterScreenState extends State<CounterScreen> {
             TextButton(
                 onPressed: () {
                   setState(() {
-
+                    counter++;
+                    print(counter);
                   });
-                  counter++;
-                  print(counter);
                 },
                 child: Text("PLUS ")),
           ],
