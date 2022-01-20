@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'counter_screen.dart';
+import 'counter/counter_screen.dart';
 
 void main(){
   runApp(MyApp());
