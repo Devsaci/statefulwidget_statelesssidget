@@ -6,26 +6,21 @@ import 'package:statefulwidget_statelesssidget/shared/bloc_observer.dart';
 
 import 'counter/counter_screen.dart';
 
-void main(){
+void main() {
   BlocOverrides.runZoned(
-        () {
+    () {
       // Use cubits...
-          runApp(MyApp());
+      runApp(MyApp());
     },
     blocObserver: MyBlocObserver(),
   );
-
 }
 
 class MyApp extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp(
+    return MaterialApp(
       home: CounterScreen(),
     );
-
-
   }
 }
