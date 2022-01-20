@@ -8,7 +8,7 @@ import 'package:statefulwidget_statelesssidget/counter/cubit.dart';
 import 'package:statefulwidget_statelesssidget/counter/states.dart';
 
 class CounterScreen extends StatelessWidget {
-  int counter = 1;
+
 
   @override
   Widget build(BuildContext context) {
