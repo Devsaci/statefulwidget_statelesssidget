@@ -7,4 +7,11 @@ class CounterCubit extends Cubit<CounterStates> {
 
   static CounterCubit get(context) => BlocProvider.of(context);
   int counter = 1;
+
+  void minus(){
+    counter--;
+  }
+  void plus(){
+    counter++;
+  }
 }
