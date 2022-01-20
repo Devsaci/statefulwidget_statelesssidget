@@ -10,10 +10,11 @@ void main(){
   BlocOverrides.runZoned(
         () {
       // Use cubits...
+          runApp(MyApp());
     },
     blocObserver: MyBlocObserver(),
   );
-  runApp(MyApp());
+
 }
 
 class MyApp extends StatelessWidget {
