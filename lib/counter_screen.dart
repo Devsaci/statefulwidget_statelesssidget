@@ -4,18 +4,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class CounterScreen extends StatefulWidget {
-  @override
-  State<CounterScreen> createState() => _CounterScreenState();
-}
-
-class _CounterScreenState extends State<CounterScreen> {
+class CounterScreen extends StatelessWidget {
   int counter = 1;
-
-  @override
-  void initState() {
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,10 +19,8 @@ class _CounterScreenState extends State<CounterScreen> {
           children: [
             TextButton(
                 onPressed: () {
-                  setState(() {
-                    counter--;
-                    print(counter);
-                  });
+                  counter--;
+                  print(counter);
                 },
                 child: Text("MINUS ")),
             Padding(
@@ -44,10 +32,8 @@ class _CounterScreenState extends State<CounterScreen> {
             ),
             TextButton(
                 onPressed: () {
-                  setState(() {
-                    counter++;
-                    print(counter);
-                  });
+                  counter++;
+                  print(counter);
                 },
                 child: Text("PLUS ")),
           ],
@@ -56,3 +42,4 @@ class _CounterScreenState extends State<CounterScreen> {
     );
   }
 }
+
